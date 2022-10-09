@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>J & J Safety Floor</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="bg-primary-500 fixed top-0 left-0 w-full shadow-lg z-10 overflow-hidden md:py-4 md:px-8 border-b-2 border-white"
+      >
+        <div
+          class="nav-center max-w-6.5 mx-auto md:flex md:items-center md:justify-between md:flex-wrap"
+        >
+          <div
+            class="nav-header flex justify-between items-center py-4 px-8 md:p-0"
+          >
+            <div class="flex items-center space-x-2">
+              <h3 class="text-white mb-0">J&J Safety Floors</h3>
+              <i
+                class="fa-solid fa-person-falling-burst text-white text-xl bg-tertiary-500 border-2 flex p-1"
+              ></i>
+            </div>
+            <button class="nav-toggle text-2xl md:hidden">
+              <i
+                class="fa-solid fa-bars text-white nav-toggle cursor-pointer transition-all duration-500 hover:scale-125 animate-pulse"
+              ></i>
+            </button>
+          </div>
+          <ul
+            class="nav-links transition-all duration-500 md:h-auto md:flex h-0"
+          >
+            <li>
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Services</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="slider-container relative w-full h-screen overflow-hidden">
+        <div class="slide hero-1 absolute w-full h-screen"></div>
+        <div class="slide hero-2 absolute w-full h-screen"></div>
+        <div class="slide hero-3 absolute w-full h-screen"></div>
+        <div class="slide-btn-container">
+          <button class="prev-btn absolute left-3 top-1/2">
+            <i class="fa-solid fa-chevron-left text-6xl text-white"></i>
+          </button>
+          <button class="next-btn absolute right-3 top-1/2">
+            <i class="fa-solid fa-chevron-right text-6xl text-white"></i>
+          </button>
+        </div>
+        <div
+          class="dots-container absolute bottom-12 left-1/2 -translate-x-1/2 space-x-2"
+        ></div>
+      </div>
+    </header>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

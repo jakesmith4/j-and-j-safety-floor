@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Base Styles */
+@layer base {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    @apply font-text;
+    line-height: 1.75;
+    font-weight: 400;
+    color: #333;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+    @apply capitalize;
+    margin: 0;
+    margin-bottom: 1.38rem;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    max-width: 40em;
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+
+  img {
+    @apply object-cover;
+  }
+}
+
+/* Adding Classes To Tailwind As Components */
+@layer components {
+  .btn {
+    @apply cursor-pointer text-white bg-primary-500 rounded tracking-wide shadow-sm transition capitalize inline-block hover:bg-primary-700 hover:shadow-md;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .btn-hipster {
+    @apply text-primary-500 bg-primary-200 hover:bg-primary-700 hover:text-primary-200;
+  }
+
+  .loading {
+    @apply w-24 h-24 border-8 border-gray-400 border-t-primary-500 rounded-full animate-spin;
+  }
+
+  .title {
+    @apply text-center mb-4;
+  }
+
+  .title-underline {
+    @apply bg-primary-500 w-28 h-1 mx-auto -mt-4;
+  }
+
+  .section-center {
+    width: 90vw;
+    max-width: 1170px;
+    @apply mx-auto;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+}
+
+/* Adding Your Own Classes */
+/* Global Classes */
+@media screen(lg) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/* Nav */
+.nav-link {
+  @apply block py-4 px-8 capitalize tracking-wider transition-all text-white text-base border-l-4 border-transparent hover:bg-secondary-500 hover:text-primary-500 hover:pl-9 hover:border-l-white md:py-2 md:px-4 md:hover:py-2 md:hover:px-4;
+}
+
+.show-links {
+  height: 224px;
+}
+
+/* Hero */
+.hero-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/floor-treatment-hero-min.jpg') no-repeat center/cover;
+}
+
+.hero-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/floor-hero-min.jpg') no-repeat center/cover;
+}
+
+.hero-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/shot-vac-min.jpg') no-repeat center/cover;
+}
+
+.slide {
+  transition: all 0.5s ease-in-out;
+}
+
+.dot {
+  @apply w-8 h-1 inline-block bg-gray-400 cursor-pointer md:w-4 md:h-4 md:rounded-full;
+}
+
+.active-slider {
+  background: white;
+}
+
+/* Form */
+.form {
+  width: 90vw;
+  max-width: 600px;
+  @apply bg-white rounded shadow-md;
+  padding: 2rem 2.5rem;
+}
+
+.form-row {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm mb-2 capitalize tracking-wide;
+}
+
+.form-input,
+.form-textarea {
+  @apply w-full border-2 border-gray-200 rounded bg-gray-50 focus:outline-primary-500;
+  padding: 0.375rem 0.75rem;
+}
+
+.form-textarea {
+  @apply h-28;
+}
+
+::placeholder {
+  font-family: inherit;
+  @apply text-gray-400;
+}
