@@ -620,6 +620,10 @@ img {
   text-align: center;
 }
 
+.section {
+  padding: 5rem 0;
+}
+
 .fixed {
   position: fixed;
 }
