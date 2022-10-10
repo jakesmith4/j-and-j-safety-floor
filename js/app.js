@@ -152,5 +152,9 @@ aboutBtnsContainer.addEventListener('click', e => {
 
   activateAboutContent(currentBtn);
   // About Info Scroll Into View
-  aboutInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  aboutInfo.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+    inline: 'nearest',
+  });
 });
