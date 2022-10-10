@@ -2,14 +2,24 @@
 
 // Height Of Open Mobile Navbar = 224px
 
-// Vars
+// VARS
+// Navbar
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+// Hero Slider
 const slides = document.querySelectorAll('.slide');
 const slideBtnContainer = document.querySelector('.slide-btn-container');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const dotsContainer = document.querySelector('.dots-container');
+// Tabbed Component
+const aboutBtnsContainer = document.querySelector('.about-btns-container');
+const aboutbtns = document.querySelectorAll('.about-btn');
+const aboutBtnsArray = Array.from(aboutbtns);
+const aboutHeading = document.querySelector('.about-heading');
+const aboutText = document.querySelector('.about-text');
+const aboutDatas = document.querySelectorAll('.about-data');
+const aboutInfo = document.querySelector('.about-info');
 
 // TOGGLE MOBILE NAVBAR
 navToggle.addEventListener('click', () => {
@@ -118,4 +128,28 @@ dotsContainer.addEventListener('click', e => {
     const slide = e.target.dataset.slide;
     goToSlide(slide);
   }
+});
+
+// Tabbed Component
+const activateAboutContent = currentBtn => {
+  // Activate Tab
+  aboutbtns.forEach(btn => btn.classList.add('border-transparent'));
+  currentBtn.classList.remove('border-transparent');
+
+  // Deactivate All Content Data
+  aboutDatas.forEach(data => data.classList.add('hidden'));
+
+  // Activate Current Content Data
+  document
+    .querySelector(`.about-data-${currentBtn.dataset.tab}`)
+    .classList.remove('hidden');
+};
+
+aboutBtnsContainer.addEventListener('click', e => {
+  const currentBtn = e.target.closest('.about-btn');
+  // Guard Clause
+  if (!currentBtn) return;
+
+  activateAboutContent(currentBtn);
+  aboutInfo.scrollIntoView({ behavior: 'smooth' });
 });
