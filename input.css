@@ -115,7 +115,7 @@
 
 /* Nav */
 .nav-link {
-  @apply block py-4 px-8 capitalize tracking-wider transition-all text-white text-base border-l-4 border-transparent hover:bg-secondary-500 hover:text-primary-500 hover:pl-9 hover:border-l-white md:py-2 md:px-4 md:hover:py-2 md:hover:px-4;
+  @apply block py-4 px-8 capitalize tracking-wider transition-all text-white text-base border-l-4 border-transparent hover:bg-secondary-500 hover:text-primary-500 hover:pl-9 hover:border-l-white md:py-2 md:px-4 md:hover:py-2 md:hover:px-4 lg:text-2xl;
 }
 
 .show-links {
