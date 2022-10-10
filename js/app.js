@@ -155,6 +155,5 @@ aboutBtnsContainer.addEventListener('click', e => {
   aboutInfo.scrollIntoView({
     behavior: 'smooth',
     block: 'start',
-    inline: 'nearest',
   });
 });

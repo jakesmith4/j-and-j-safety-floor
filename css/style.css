@@ -964,7 +964,7 @@ img {
   height: 224px;
 }
 
-/* Hero */
+/* HERO */
 
 .hero-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -1004,6 +1004,12 @@ img {
 
 .active-slider {
   background: white;
+}
+
+/* ABOUT */
+
+.about-info {
+  scroll-margin-top: 10px;
 }
 
 /* Form */
