@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['./*.html'],
   theme: {
     fontFamily: {
       heading: ['Roboto Condensed', 'sans-serif'],
       text: ['Roboto', 'sans-serif'],
+    },
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {
