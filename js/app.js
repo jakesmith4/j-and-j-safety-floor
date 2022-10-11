@@ -55,7 +55,7 @@ const moveSlider = () => {
 // Restart Timer
 const restartTimer = () => {
   clearInterval(timer);
-  timer = setInterval(moveSlider, 4000);
+  timer = setInterval(moveSlider, 8000);
 };
 
 // Slide Slider To Right
@@ -93,7 +93,7 @@ const activateDot = slide => {
 };
 
 // Auto Switch
-let timer = setInterval(moveSlider, 4000);
+let timer = setInterval(moveSlider, 8000);
 
 window.addEventListener('DOMContentLoaded', () => {
   setInterval(timer);
