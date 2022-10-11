@@ -169,8 +169,8 @@
 }
 
 /* SHOWCASE */
-.showcase-item {
-  height: 300px;
+.showcase-img {
+  @apply w-full h-full;
 }
 
 /* Form */
