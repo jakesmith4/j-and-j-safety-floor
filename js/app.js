@@ -6,6 +6,7 @@
 // Navbar
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navBar = document.querySelector('.nav');
 // Hero Slider
 const slides = document.querySelectorAll('.slide');
 const slideBtnContainer = document.querySelector('.slide-btn-container');
@@ -24,6 +25,7 @@ const aboutInfo = document.querySelector('.about-info');
 // TOGGLE MOBILE NAVBAR
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('show-links');
+  navBar.classList.toggle('nav-bg-full');
 });
 
 // HERO SLIDER

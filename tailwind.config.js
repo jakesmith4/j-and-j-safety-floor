@@ -8,7 +8,7 @@ module.exports = {
       text: ['Roboto', 'sans-serif'],
     },
     screens: {
-      xs: '400px',
+      xs: '375px',
       ...defaultTheme.screens,
     },
     extend: {
