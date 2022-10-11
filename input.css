@@ -160,8 +160,17 @@
 }
 
 /* ABOUT */
+.about-img {
+  @apply w-32 h-32 inline-block mb-8 border-4 rounded-3xl border-transparent transition group-hover:scale-105 group-hover:border-primary-500;
+}
+
 .about-info {
   scroll-margin-top: 95px;
+}
+
+/* SHOWCASE */
+.showcase-item {
+  height: 300px;
 }
 
 /* Form */
