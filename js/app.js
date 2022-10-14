@@ -21,11 +21,24 @@ const aboutHeading = document.querySelector('.about-heading');
 const aboutText = document.querySelector('.about-text');
 const aboutDatas = document.querySelectorAll('.about-data');
 const aboutInfo = document.querySelector('.about-info');
+const aboutLink = document.querySelector('.about-link');
 
 // TOGGLE MOBILE NAVBAR
-navToggle.addEventListener('click', () => {
+// Toggle Navbar
+const toggleNavbar = () => {
   navLinks.classList.toggle('show-links');
   navBar.classList.toggle('nav-bg-full');
+};
+
+// Navbar Event Listener
+navBar.addEventListener('click', e => {
+  if (e.target.classList.contains('nav-toggle')) {
+    toggleNavbar();
+  }
+
+  if (e.target.classList.contains('nav-link')) {
+    toggleNavbar();
+  }
 });
 
 // HERO SLIDER
@@ -147,15 +160,25 @@ const activateAboutContent = currentBtn => {
     .classList.remove('hidden');
 };
 
+const scrollInfoIntoView = () => {
+  aboutInfo.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+};
+
 aboutBtnsContainer.addEventListener('click', e => {
   const currentBtn = e.target.closest('.about-btn');
   // Guard Clause
   if (!currentBtn) return;
 
   activateAboutContent(currentBtn);
-  // About Info Scroll Into View
-  aboutInfo.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
+  scrollInfoIntoView();
+});
+
+// Navbar Click About Link
+aboutLink.addEventListener('click', e => {
+  e.preventDefault();
+  activateAboutContent(document.querySelector('.about-j'));
+  scrollInfoIntoView();
 });
