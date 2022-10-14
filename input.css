@@ -201,3 +201,8 @@
   font-family: inherit;
   @apply text-gray-400;
 }
+
+/* Footer */
+.footer-link {
+  @apply hover:text-primary-500 transition;
+}

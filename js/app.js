@@ -21,7 +21,7 @@ const aboutHeading = document.querySelector('.about-heading');
 const aboutText = document.querySelector('.about-text');
 const aboutDatas = document.querySelectorAll('.about-data');
 const aboutInfo = document.querySelector('.about-info');
-const aboutLink = document.querySelector('.about-link');
+const aboutLinks = document.querySelectorAll('.about-link');
 
 // TOGGLE MOBILE NAVBAR
 // Toggle Navbar
@@ -176,9 +176,15 @@ aboutBtnsContainer.addEventListener('click', e => {
   scrollInfoIntoView();
 });
 
-// Navbar Click About Link
-aboutLink.addEventListener('click', e => {
-  e.preventDefault();
-  activateAboutContent(document.querySelector('.about-j'));
-  scrollInfoIntoView();
+// Navbar & Footer Click About Link
+aboutLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    activateAboutContent(document.querySelector('.about-j'));
+    scrollInfoIntoView();
+  });
 });
+
+// Footer Date
+const date = (document.querySelector('.date').innerHTML =
+  new Date().getFullYear());
