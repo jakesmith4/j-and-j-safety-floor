@@ -175,10 +175,7 @@
 
 /* Form */
 .form {
-  width: 90vw;
-  max-width: 600px;
-  @apply bg-white rounded shadow-md;
-  padding: 2rem 2.5rem;
+  @apply px-10;
 }
 
 .form-row {
@@ -186,12 +183,12 @@
 }
 
 .form-label {
-  @apply block text-sm mb-2 capitalize tracking-wide;
+  @apply block text-lg mb-2 capitalize tracking-wide text-secondary-500 font-bold;
 }
 
 .form-input,
 .form-textarea {
-  @apply w-full border-2 border-gray-200 rounded bg-gray-50 focus:outline-primary-500;
+  @apply w-full border-b-2 border-secondary-500 bg-tertiary-500 placeholder:text-gray-500 outline-transparent focus:outline-none;
   padding: 0.375rem 0.75rem;
 }
 
