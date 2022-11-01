@@ -206,3 +206,13 @@
 .footer-link {
   @apply hover:text-primary-500 transition;
 }
+
+/* SERVICS PAGE */
+/* Hero */
+.hero {
+  background: url('../img/j-j-services-min.jpg') no-repeat center/cover;
+}
+
+.hero::before {
+  background: rgba(0, 0, 0, 0.4);
+}
