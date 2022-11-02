@@ -216,3 +216,9 @@
 .hero::before {
   background: rgba(0, 0, 0, 0.4);
 }
+
+/* About John */
+.about-john-icon {
+  height: 100px;
+  width: 100px;
+}
